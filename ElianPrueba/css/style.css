@@ -1,0 +1,22 @@
+img {
+	max-width: 100%;
+}
+
+.Highlight {
+	padding: Sem 0;
+}
+
+.Highlight.Grey {
+	color: white;
+	background-color: lightslategrey;
+}
+
+.Highlight.Blue {
+	color: white;
+	background-color: darkslategrey;
+}
+
+.Highlight.White {
+	color: #333;
+	background-color: ghostwhite;
+}

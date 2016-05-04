@@ -1,0 +1,46 @@
+﻿{
+  "gridEditors": [
+    {
+      "name": "My Grid Editor",
+      "alias": "myGridEditor",
+      "view": "textstring",
+      "icon": "icon-grid",
+      "config": {
+        "style": "font-size:30px;line-height:30px;font-weight:bold;",
+        "markup": "<h2>#value#</h2>"
+      }
+    },
+    {
+      "name": "Paragraph",
+      "alias": "myParagraph",
+      "view": "textstring",
+      "icon": "icon-layout",
+      "config": {
+        "style": "font-size:16px;line-height:16px;font-weight:normal;",
+        "markup": "<p>#value#</p>"
+      }
+    },
+    {
+      "name": "Code",
+      "alias": "myCodeblock",
+      "view": "textstring",
+      "icon": "icon-code",
+      "config": {
+        "style": "font-size:16px;line-height:16px;font-family:monospace;",
+        "markup": "<pre>#value#</pre>"
+      }
+    },
+    {
+      "name": "Square Image",
+      "alias": "squareImage",
+      "view": "media",
+      "icon": "icon-picture",
+      "config": {
+        "size": {
+          "height": 555,
+          "width": 555
+        }
+      }
+    }
+  ]
+}

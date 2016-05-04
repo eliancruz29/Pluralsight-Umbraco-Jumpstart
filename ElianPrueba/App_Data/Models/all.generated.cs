@@ -62,15 +62,6 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Body Text
-		///</summary>
-		[ImplementPropertyType("bodyText")]
-		public IHtmlString BodyText
-		{
-			get { return this.GetPropertyValue<IHtmlString>("bodyText"); }
-		}
-
-		///<summary>
 		/// Email: Email address used for the contact form
 		///</summary>
 		[ImplementPropertyType("email")]
@@ -80,12 +71,21 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Promo Text
+		/// Footer
 		///</summary>
-		[ImplementPropertyType("promoText")]
-		public IHtmlString PromoText
+		[ImplementPropertyType("footer")]
+		public IHtmlString Footer
 		{
-			get { return this.GetPropertyValue<IHtmlString>("promoText"); }
+			get { return this.GetPropertyValue<IHtmlString>("footer"); }
+		}
+
+		///<summary>
+		/// Frontpage Article
+		///</summary>
+		[ImplementPropertyType("frontpageArticle")]
+		public Newtonsoft.Json.Linq.JToken FrontpageArticle
+		{
+			get { return this.GetPropertyValue<Newtonsoft.Json.Linq.JToken>("frontpageArticle"); }
 		}
 
 		///<summary>

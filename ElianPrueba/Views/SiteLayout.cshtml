@@ -1,0 +1,20 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>@Umbraco.Field("pageName")</title>
+	
+		<link rel="stylesheet" type="text/css" href="@Url.Content("~/css/style.css")" />
+		<link rel="stylesheet" type="text/css" href="@Url.Content("~/css/bootstrap.min.css")" />
+		<script type="text/javascript" src="@Url.Content("~/scripts/test.js")"></script>
+		@RenderSection("Head", required:false)
+	</head>
+	<body>
+		@RenderBody()
+		@Umbraco.Field("footer", recursive: true)
+	</body>
+</html>

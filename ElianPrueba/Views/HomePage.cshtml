@@ -1,15 +1,15 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.HomePage>
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
-	Layout = null;
+	Layout = "SiteLayout.cshtml";
 }
-<html>
-	<head>
-		<title>Title</title>
-	</head>
-	<body>
-		<h1>@Umbraco.Field("pageName")</h1>
-		@Umbraco.Field("bodyText")
-		<p>Hello World!!</p>
-	</body>
-</html>
+
+@section Head {
+	<script type="text/javascript">
+		alert("Umbraco Rocks");
+	</script>
+}
+
+<h1>@Umbraco.Field("pageName")</h1>
+@Umbraco.Field("bodyText")
+@CurrentPage.GetGridHtml("frontpageArticle")
