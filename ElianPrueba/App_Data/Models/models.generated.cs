@@ -18,134 +18,10 @@ using Umbraco.Web;
 using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
-[assembly: PureLiveAssembly, System.Reflection.AssemblyVersion("0.0.0.2")]
+[assembly: PureLiveAssembly, System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedContentModels
 {
-	/// <summary>Home Page</summary>
-	[PublishedContentModel("homePage")]
-	public partial class HomePage : PublishedContentModel, ISEO
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "homePage";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public HomePage(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<HomePage, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Email: Email address used for the contact form
-		///</summary>
-		[ImplementPropertyType("email")]
-		public string Email
-		{
-			get { return this.GetPropertyValue<string>("email"); }
-		}
-
-		///<summary>
-		/// Footer
-		///</summary>
-		[ImplementPropertyType("footer")]
-		public IHtmlString Footer
-		{
-			get { return this.GetPropertyValue<IHtmlString>("footer"); }
-		}
-
-		///<summary>
-		/// Frontpage Article
-		///</summary>
-		[ImplementPropertyType("frontpageArticle")]
-		public Newtonsoft.Json.Linq.JToken FrontpageArticle
-		{
-			get { return this.GetPropertyValue<Newtonsoft.Json.Linq.JToken>("frontpageArticle"); }
-		}
-
-		///<summary>
-		/// Title
-		///</summary>
-		[ImplementPropertyType("title")]
-		public object Title
-		{
-			get { return this.GetPropertyValue("title"); }
-		}
-
-		///<summary>
-		/// Meta Description
-		///</summary>
-		[ImplementPropertyType("metaDescription")]
-		public string MetaDescription
-		{
-			get { return SEO.GetMetaDescription(this); }
-		}
-
-		///<summary>
-		/// Meta Tags
-		///</summary>
-		[ImplementPropertyType("metaTags")]
-		public object MetaTags
-		{
-			get { return SEO.GetMetaTags(this); }
-		}
-
-		///<summary>
-		/// Meta Title
-		///</summary>
-		[ImplementPropertyType("metaTitle")]
-		public string MetaTitle
-		{
-			get { return SEO.GetMetaTitle(this); }
-		}
-	}
-
-	/// <summary>Text Page</summary>
-	[PublishedContentModel("textPage")]
-	public partial class TextPage : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "textPage";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public TextPage(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<TextPage, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Body Text
-		///</summary>
-		[ImplementPropertyType("bodyText")]
-		public IHtmlString BodyText
-		{
-			get { return this.GetPropertyValue<IHtmlString>("bodyText"); }
-		}
-	}
-
 	/// <summary>News Area</summary>
 	[PublishedContentModel("newsArea")]
 	public partial class NewsArea : PublishedContentModel
@@ -243,7 +119,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 	}
 
-	// Mixin content Type 1074 with alias "sEO"
+	// Mixin content Type 1062 with alias "sEO"
 	/// <summary>SEO</summary>
 	public partial interface ISEO : IPublishedContent
 	{
@@ -317,6 +193,148 @@ namespace Umbraco.Web.PublishedContentModels
 
 		/// <summary>Static getter for Meta Title</summary>
 		public static string GetMetaTitle(ISEO that) { return that.GetPropertyValue<string>("metaTitle"); }
+	}
+
+	/// <summary>Home Page</summary>
+	[PublishedContentModel("homePage")]
+	public partial class HomePage : PublishedContentModel, ISEO
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "homePage";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public HomePage(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<HomePage, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Body Text
+		///</summary>
+		[ImplementPropertyType("bodyText")]
+		public IHtmlString BodyText
+		{
+			get { return this.GetPropertyValue<IHtmlString>("bodyText"); }
+		}
+
+		///<summary>
+		/// Email: Email address used for the contact form
+		///</summary>
+		[ImplementPropertyType("email")]
+		public string Email
+		{
+			get { return this.GetPropertyValue<string>("email"); }
+		}
+
+		///<summary>
+		/// Footer
+		///</summary>
+		[ImplementPropertyType("footer")]
+		public IHtmlString Footer
+		{
+			get { return this.GetPropertyValue<IHtmlString>("footer"); }
+		}
+
+		///<summary>
+		/// Frontpage Article
+		///</summary>
+		[ImplementPropertyType("frontpageArticle")]
+		public Newtonsoft.Json.Linq.JToken FrontpageArticle
+		{
+			get { return this.GetPropertyValue<Newtonsoft.Json.Linq.JToken>("frontpageArticle"); }
+		}
+
+		///<summary>
+		/// Promo Text
+		///</summary>
+		[ImplementPropertyType("promoText")]
+		public IHtmlString PromoText
+		{
+			get { return this.GetPropertyValue<IHtmlString>("promoText"); }
+		}
+
+		///<summary>
+		/// Title
+		///</summary>
+		[ImplementPropertyType("title")]
+		public object Title
+		{
+			get { return this.GetPropertyValue("title"); }
+		}
+
+		///<summary>
+		/// Meta Description
+		///</summary>
+		[ImplementPropertyType("metaDescription")]
+		public string MetaDescription
+		{
+			get { return SEO.GetMetaDescription(this); }
+		}
+
+		///<summary>
+		/// Meta Tags
+		///</summary>
+		[ImplementPropertyType("metaTags")]
+		public object MetaTags
+		{
+			get { return SEO.GetMetaTags(this); }
+		}
+
+		///<summary>
+		/// Meta Title
+		///</summary>
+		[ImplementPropertyType("metaTitle")]
+		public string MetaTitle
+		{
+			get { return SEO.GetMetaTitle(this); }
+		}
+	}
+
+	/// <summary>Text Page</summary>
+	[PublishedContentModel("textPage")]
+	public partial class TextPage : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "textPage";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public TextPage(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<TextPage, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Body Text
+		///</summary>
+		[ImplementPropertyType("bodyText")]
+		public IHtmlString BodyText
+		{
+			get { return this.GetPropertyValue<IHtmlString>("bodyText"); }
+		}
 	}
 
 	/// <summary>Folder</summary>
