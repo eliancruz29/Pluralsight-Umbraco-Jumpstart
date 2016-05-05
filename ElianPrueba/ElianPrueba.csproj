@@ -337,9 +337,6 @@
     <Content Include="media\1001\untitled_thumb.jpg" />
     <Content Include="media\1001\untitled_thumb.png" />
     <Content Include="packages.config" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="App_Plugins\ModelsBuilder\package.manifest" />
     <Content Include="scripts\test.js" />
     <Content Include="Umbraco\Actions\delete.aspx" />
