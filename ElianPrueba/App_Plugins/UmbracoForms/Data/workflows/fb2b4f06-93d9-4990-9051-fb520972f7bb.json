@@ -1,0 +1,14 @@
+{
+  "id": "fb2b4f06-93d9-4990-9051-fb520972f7bb",
+  "name": "Send email to ecruz@fintech.do when submitted",
+  "form": "182d7b11-1d53-476d-bf35-9b14758bd922",
+  "active": true,
+  "workflowTypeId": "e96badd7-05be-4978-b8d9-b3d733de70a5",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "ecruz@fintech.do",
+    "Subject": "the form Formulario Contacto was submitted",
+    "Message": "the form Formulario Contacto was submitted, this is the list of values it contained, you can turn this email off under workflows in Umbraco Contour"
+  },
+  "sortOrder": 0
+}

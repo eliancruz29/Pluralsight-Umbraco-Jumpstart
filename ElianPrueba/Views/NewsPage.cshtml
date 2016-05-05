@@ -1,0 +1,13 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "SiteLayout.cshtml";
+}
+
+<h1>@Umbraco.Field("pageName")</h1>
+	
+	@foreach(var newsItem in CurrentPage.Children.Where("Visible"))
+	{
+		<h2>@newsItem.Name</h2>
+		<h3>@newsItem.CreateDate.ToLongDateString()</h3>
+		<p>@newsItem.summary <a href="@newsItem.Url">@Umbraco.GetDictionaryValue("ReadMore")</a></p>
+	}

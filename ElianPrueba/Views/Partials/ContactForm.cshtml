@@ -1,0 +1,45 @@
+﻿@model ElianPrueba.Models.contactformViewModel
+
+@if (TempData["success"] == null)
+{
+    using (Html.BeginUmbracoForm<ElianPrueba.Controllers.ContactFormSurfaceController>("HandleFormSubmit"))
+    {
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Name" })
+                        @Html.ValidationMessageFor(m => m.Name)
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email address" })
+                        @Html.ValidationMessageFor(m => m.Email)
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        @Html.TextAreaFor(m => m.Message, new { @class = "form-control", placeholder = "Your Message" })
+                        @Html.ValidationMessageFor(m => m.Message)
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <button id="contact-submit" type="submit" class="btn btn-primary input-medium pull-right">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <p>We'll be in touch soon</p>
+}
