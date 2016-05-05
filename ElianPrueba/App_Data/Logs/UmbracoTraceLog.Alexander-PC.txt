@@ -1,0 +1,15 @@
+﻿ 2016-05-05 00:02:31,396 [P7732/D9/T74] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ICacheRefresher
+ 2016-05-05 00:02:31,436 [P7732/D9/T74] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 0 (took 40ms)
+ 2016-05-05 00:04:47,826 [P7732/D9/T41] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2016-05-05 00:04:47,826 [P7732/D9/T41] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 0ms)
+ 2016-05-05 00:06:38,644 [P7732/D9/T122] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.cms.businesslogic.macro.IMacroEngine
+ 2016-05-05 00:06:38,654 [P7732/D9/T122] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.cms.businesslogic.macro.IMacroEngine, found 0 (took 10ms)
+ 2016-05-05 00:07:10,061 [P7732/D9/T41] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Creative' with Id '1083' has been published.
+ 2016-05-05 00:07:14,188 [P7732/D9/T98] INFO  umbraco.content - Save Xml to file...
+ 2016-05-05 00:07:14,192 [P7732/D9/T102] INFO  umbraco.content - Saved Xml to file.
+ 2016-05-05 00:07:42,340 [P7732/D9/T41] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field crops
+ 2016-05-05 00:16:38,511 [P7732/D9/T75] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field crops
+ 2016-05-05 00:16:44,895 [P7732/D9/T130] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field editor
+ 2016-05-05 00:16:44,895 [P7732/D9/T130] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field hideLabel
+ 2016-05-05 00:16:45,012 [P7732/D9/T130] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field editor
+ 2016-05-05 00:16:45,012 [P7732/D9/T130] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field hideLabel

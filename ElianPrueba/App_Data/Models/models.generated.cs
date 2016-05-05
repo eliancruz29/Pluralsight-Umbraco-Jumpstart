@@ -18,7 +18,7 @@ using Umbraco.Web;
 using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
-[assembly: PureLiveAssembly, System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly: PureLiveAssembly, System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedContentModels
 {
@@ -334,6 +334,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public IHtmlString BodyText
 		{
 			get { return this.GetPropertyValue<IHtmlString>("bodyText"); }
+		}
+
+		///<summary>
+		/// Hide from nav
+		///</summary>
+		[ImplementPropertyType("umbracoNaviHide")]
+		public bool UmbracoNaviHide
+		{
+			get { return this.GetPropertyValue<bool>("umbracoNaviHide"); }
 		}
 	}
 

@@ -349,6 +349,15 @@ namespace Umbraco.Web.PublishedContentModels
 		{
 			get { return this.GetPropertyValue<IHtmlString>("bodyText"); }
 		}
+
+		///<summary>
+		/// Hide from nav
+		///</summary>
+		[ImplementPropertyType("umbracoNaviHide")]
+		public bool UmbracoNaviHide
+		{
+			get { return this.GetPropertyValue<bool>("umbracoNaviHide"); }
+		}
 	}
 
 	/// <summary>Folder</summary>
